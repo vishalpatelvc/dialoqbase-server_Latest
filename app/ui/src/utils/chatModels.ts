@@ -8,7 +8,35 @@ export const availableChatModels = [
   { value: "claude-instant-1", label: "Claude Instant (Anthropic)" },
   {
     value: "google-bison",
-    label: "Google chat-bison-001 (beta)",
+    label: "Google chat-bison-001",
+  },
+  {
+    value: "llama-v2-7b-chat",
+    label: "Llama v2 7B (Fireworks)",
+  },
+  {
+    value: "llama-v2-13b-chat",
+    label: "Llama v2 13B (Fireworks)",
+  },
+  {
+    value: "llama-v2-70b-chat",
+    label: "Llama v2 70B (Fireworks)",
+  },
+  {
+    value: "llama-v2-7b-chat-w8a16",
+    label: "Llama v2 7B Chat int8 (Fireworks)",
+  },
+  {
+    value: "llama-v2-13b-chat-w8a16",
+    label: "Llama v2 13B Chat int8 (Fireworks)",
+  },
+  {
+    value: "llama-v2-13b-code-instruct",
+    label: "Llama v2 13B Code Instruct (Fireworks)",
+  },
+  {
+    value: "llama-v2-34b-code-instruct-w8a16",
+    label: "Llama v2 34B Code Instruct int8 (Fireworks)",
   },
   // {
   //   value: "falcon-7b-instruct-inference",
@@ -24,6 +52,13 @@ export const streamingSupportedModels = [
   "claude-1",
   "claude-instant-1",
   "claude-2",
+  "llama-v2-7b-chat",
+  "llama-v2-13b-chat",
+  "llama-v2-70b-chat",
+  "llama-v2-7b-chat-w8a16",
+  "llama-v2-13b-chat-w8a16",
+  "llama-v2-13b-code-instruct",
+  "llama-v2-34b-code-instruct-w8a16",
 ];
 
 export const isStreamingSupported = (model: string) => {

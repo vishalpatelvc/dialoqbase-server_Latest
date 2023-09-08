@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Dialoqbase",
   description: "Create chatbots with ease",
   lastUpdated: true,
+
   head: [
     // [
     //   "script",
@@ -36,9 +37,16 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/logo.png",
+    search: {
+      provider: "local",
+    },
     nav: [
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/what-is-dialoqbase" },
+      {
+        text: "AI Providers",
+        link: "/guide/ai-providers/openai",
+      },
       { text: "Self Hosting", link: "/guide/self-hosting" },
     ],
 
@@ -80,16 +88,50 @@ export default defineConfig({
           {
             text: "Discord (experimental)",
             link: "/guide/integration/discord",
-          }
-        ]
+          },
+        ],
       },
       {
         text: "Development",
         collapsed: false,
         items: [
           {
-            text:"Running locally for development",
+            text: "Running locally for development",
             link: "/guide/running-locally-for-development",
+          },
+          {
+            text: "Transitioning from Single-User to Multi-User mode",
+            link: "/guide/transitioning-from-single-user-to-multi-user-mode",
+          },
+        ],
+      },
+      {
+        text: "AI Providers",
+        collapsed: false,
+        items: [
+          {
+            text: "OpenAI",
+            link: "/guide/ai-providers/openai",
+          },
+          {
+            text: "Fireworks",
+            link: "/guide/ai-providers/fireworks",
+          },
+          {
+            text: "Google",
+            link: "/guide/ai-providers/google",
+          },
+          {
+            text: "HuggingFace",
+            link: "/guide/ai-providers/huggingface",
+          },
+          {
+            text: "Cohere",
+            link: "/guide/ai-providers/cohere",
+          },
+          {
+            text: "TensorFlow",
+            link: "/guide/ai-providers/tensorflow",
           }
         ]
       }
@@ -102,7 +144,10 @@ export default defineConfig({
     ],
     footer: {
       message: "MIT Licensed Open Source Project",
-      copyright: "Copyright © 2023 Muhammed Nazeem",
+      copyright: "Copyright © 2023 Muhammed Nazeem  & Dialoqbase Contributors",
     },
+  },
+  sitemap: {
+    hostname: "https://dialoqbase.n4ze3m.com",
   },
 });
